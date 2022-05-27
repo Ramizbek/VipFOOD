@@ -17,10 +17,8 @@ class MySplashScreen : AppCompatActivity() {
         setContentView(binding.root)
 
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
-        }, 1500)
-        Handler().postDelayed({
             binding.myProgress.visibility = View.INVISIBLE
+            startActivity(Intent(this, MainActivity::class.java))
         }, 1500)
     }
 }
