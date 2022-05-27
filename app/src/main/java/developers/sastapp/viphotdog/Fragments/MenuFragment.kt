@@ -22,7 +22,9 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentMenuBinding.inflate(layoutInflater)
-        val tablePosition = arguments?.getInt("position")
+
+        // Position for table of main fragment
+        val tablePosition = arguments?.getInt("tablePos")
         start()
         binding.apply {
             menuRv.adapter = MenuAdapter(list, object : OnMenuClickListener {
