@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import developers.sastapp.viphotdog.Adapters.ArxivAdapter
+import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.databinding.FragmentArxivBinding
 
 class ArxivFragment : Fragment() {
@@ -14,6 +16,7 @@ class ArxivFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentArxivBinding.inflate(layoutInflater)
+        binding.arxivRv.adapter = ArxivAdapter(MyData.myListArxiv[0])
         return binding.root
     }
 }
