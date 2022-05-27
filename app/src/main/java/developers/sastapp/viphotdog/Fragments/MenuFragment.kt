@@ -42,12 +42,12 @@ class MenuFragment : Fragment() {
                             list[position].price.substring(0, list[position].price.length - 4)
                                 .toInt()
                         addPlus.setOnClickListener {
-                            addCount.text = "${++count} та"
+                            addCount.text = "${++count}"
                             addPrice.text = "${mPrice * count} сум"
                         }
                         addMinus.setOnClickListener {
                             if (addCount.text != "0") {
-                                addCount.text = "${--count} та"
+                                addCount.text = "${--count}"
                                 addPrice.text = "${mPrice * count} сум"
                             }
                             if (addCount.text == "0") {
