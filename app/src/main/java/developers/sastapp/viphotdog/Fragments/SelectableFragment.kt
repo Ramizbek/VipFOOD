@@ -17,7 +17,7 @@ class SelectableFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSelectableBinding.inflate(layoutInflater)
-        binding.selectableRv.adapter = SelectableAdapter(MyData.myList)
+        binding.selectableRv.adapter = SelectableAdapter(MyData.myList[arguments?.getInt("sel")!!])
         return binding.root
     }
 }

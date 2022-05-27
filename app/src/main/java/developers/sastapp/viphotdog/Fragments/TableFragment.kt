@@ -31,21 +31,19 @@ class TableFragment : Fragment() {
                 view.tableAdd.setOnClickListener {
                     findNavController().navigate(
                         R.id.menuFragment,
-                        bundleOf("position" to position)
+                        bundleOf("tablePos" to position)
                     )
                     bottom.cancel()
                 }
                 view.tableSelectable.setOnClickListener {
                     findNavController().navigate(
-                        R.id.selectableFragment,
-                        bundleOf("position" to position)
+                        R.id.selectableFragment
                     )
                     bottom.cancel()
                 }
                 view.tableArxiv.setOnClickListener {
                     findNavController().navigate(
-                        R.id.arxivFragment,
-                        bundleOf("position" to position)
+                        R.id.arxivFragment
                     )
                     bottom.cancel()
                 }

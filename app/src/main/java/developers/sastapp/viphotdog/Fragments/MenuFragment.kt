@@ -70,6 +70,7 @@ class MenuFragment : Fragment() {
                                 )
                             )
                             MyData.myList[tablePosition!!] = listt
+                            Bundle().putInt("sel", tablePosition)
 //                            Bundle().putString("name", addName.text.toString())
 //                            Bundle().putString("price", addPrice.text.toString())
 //                            Bundle().putString("count", addCount.text.toString())
