@@ -1,9 +1,9 @@
-package developers.sastapp.viphotdog.Adapters
+package developers.sastapp.viphotdog.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import developers.sastapp.viphotdog.Models.Table
+import developers.sastapp.viphotdog.models.Table
 import developers.sastapp.viphotdog.databinding.ItemTableBinding
 import java.time.LocalDate
 import java.time.LocalTime

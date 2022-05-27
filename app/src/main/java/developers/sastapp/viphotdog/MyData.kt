@@ -1,7 +1,7 @@
 package developers.sastapp.viphotdog
 
-import developers.sastapp.viphotdog.Models.Arxiv
-import developers.sastapp.viphotdog.Models.Selectable
+import developers.sastapp.viphotdog.models.Arxiv
+import developers.sastapp.viphotdog.models.Selectable
 
 object MyData {
     val myList = ArrayList<ArrayList<Selectable>>()

@@ -3,7 +3,7 @@ package developers.sastapp.viphotdog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
-import developers.sastapp.viphotdog.Models.Selectable
+import developers.sastapp.viphotdog.models.Selectable
 import developers.sastapp.viphotdog.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

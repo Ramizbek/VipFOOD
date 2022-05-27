@@ -1,9 +1,9 @@
-package developers.sastapp.viphotdog.Adapters
+package developers.sastapp.viphotdog.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import developers.sastapp.viphotdog.Models.Selectable
+import developers.sastapp.viphotdog.models.Selectable
 import developers.sastapp.viphotdog.databinding.ItemSelectableBinding
 
 class SelectableAdapter(

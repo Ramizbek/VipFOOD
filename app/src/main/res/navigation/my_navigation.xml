@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/tableFragment"
-        android:name="developers.sastapp.viphotdog.Fragments.TableFragment"
+        android:name="developers.sastapp.viphotdog.fragments.TableFragment"
         android:label="fragment_table"
         tools:layout="@layout/fragment_table">
         <action
@@ -22,17 +22,17 @@
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
-        android:name="developers.sastapp.viphotdog.Fragments.MenuFragment"
+        android:name="developers.sastapp.viphotdog.fragments.MenuFragment"
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" />
     <fragment
         android:id="@+id/selectableFragment"
-        android:name="developers.sastapp.viphotdog.Fragments.SelectableFragment"
+        android:name="developers.sastapp.viphotdog.fragments.SelectableFragment"
         android:label="fragment_selectable"
         tools:layout="@layout/fragment_selectable" />
     <fragment
         android:id="@+id/arxivFragment"
-        android:name="developers.sastapp.viphotdog.Fragments.ArxivFragment"
+        android:name="developers.sastapp.viphotdog.fragments.ArxivFragment"
         android:label="fragment_arxiv"
         tools:layout="@layout/fragment_arxiv" />
 </navigation>

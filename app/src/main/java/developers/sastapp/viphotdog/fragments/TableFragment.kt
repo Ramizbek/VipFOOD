@@ -1,4 +1,4 @@
-package developers.sastapp.viphotdog.Fragments
+package developers.sastapp.viphotdog.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import developers.sastapp.viphotdog.Adapters.OnTableClickListener
-import developers.sastapp.viphotdog.Adapters.TableAdapter
-import developers.sastapp.viphotdog.Models.Table
+import developers.sastapp.viphotdog.adapters.OnTableClickListener
+import developers.sastapp.viphotdog.adapters.TableAdapter
+import developers.sastapp.viphotdog.models.Table
 import developers.sastapp.viphotdog.R
 import developers.sastapp.viphotdog.databinding.FragmentTableBinding
 import developers.sastapp.viphotdog.databinding.ItemDialogTableBinding

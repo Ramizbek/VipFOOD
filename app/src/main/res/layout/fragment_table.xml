@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFC107"
-    tools:context=".Fragments.TableFragment">
+    tools:context=".fragments.TableFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/table_rv"

@@ -1,9 +1,9 @@
-package developers.sastapp.viphotdog.Adapters
+package developers.sastapp.viphotdog.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import developers.sastapp.viphotdog.Models.Arxiv
+import developers.sastapp.viphotdog.models.Arxiv
 import developers.sastapp.viphotdog.databinding.ItemArxivBinding
 
 class ArxivAdapter(

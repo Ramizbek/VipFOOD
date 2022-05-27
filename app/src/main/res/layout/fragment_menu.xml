@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#302F2F"
     android:orientation="vertical"
-    tools:context=".Fragments.MenuFragment">
+    tools:context=".fragments.MenuFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/menu_rv"

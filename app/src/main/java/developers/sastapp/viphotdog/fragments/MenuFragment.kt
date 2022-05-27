@@ -1,4 +1,4 @@
-package developers.sastapp.viphotdog.Fragments
+package developers.sastapp.viphotdog.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import developers.sastapp.viphotdog.Adapters.MenuAdapter
-import developers.sastapp.viphotdog.Adapters.OnMenuClickListener
-import developers.sastapp.viphotdog.Models.Menu
-import developers.sastapp.viphotdog.Models.Selectable
+import developers.sastapp.viphotdog.adapters.MenuAdapter
+import developers.sastapp.viphotdog.adapters.OnMenuClickListener
+import developers.sastapp.viphotdog.models.Menu
+import developers.sastapp.viphotdog.models.Selectable
 import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.R
 import developers.sastapp.viphotdog.databinding.FragmentMenuBinding
