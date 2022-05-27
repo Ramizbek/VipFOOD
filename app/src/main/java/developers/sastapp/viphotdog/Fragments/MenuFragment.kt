@@ -61,13 +61,15 @@ class MenuFragment : Fragment() {
                         addName.text = list[position].name
                         addPrice.text = list[position].price
                         addSave.setOnClickListener {
-                            MyData.myList.add(
+                            val listt = ArrayList<Selectable>()
+                            listt.add(
                                 Selectable(
                                     addName.text.toString(),
                                     addPrice.text.toString(),
                                     addCount.text.toString()
                                 )
                             )
+                            MyData.myList[tablePosition!!] = listt
 //                            Bundle().putString("name", addName.text.toString())
 //                            Bundle().putString("price", addPrice.text.toString())
 //                            Bundle().putString("count", addCount.text.toString())
