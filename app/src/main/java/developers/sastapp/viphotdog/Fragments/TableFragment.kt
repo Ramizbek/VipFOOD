@@ -36,10 +36,18 @@ class TableFragment : Fragment() {
                     bottom.cancel()
                 }
                 view.tableSelectable.setOnClickListener {
-
+                    findNavController().navigate(
+                        R.id.selectableFragment,
+                        bundleOf("position" to position)
+                    )
+                    bottom.cancel()
                 }
                 view.tableArxiv.setOnClickListener {
-
+                    findNavController().navigate(
+                        R.id.arxivFragment,
+                        bundleOf("position" to position)
+                    )
+                    bottom.cancel()
                 }
                 bottom.setContentView(view.root)
                 bottom.show()

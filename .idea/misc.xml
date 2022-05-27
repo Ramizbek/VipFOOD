@@ -9,11 +9,14 @@
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/drawable/ic_table_add.xml" value="0.22314814814814815" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/activity_my_splash_screen.xml" value="0.1671195652173913" />
+        <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/fragment_arxiv.xml" value="0.15760869565217392" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/fragment_menu.xml" value="0.21" />
+        <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/fragment_selectable.xml" value="0.10764944275582573" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/fragment_tables.xml" value="0.11730072463768115" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/item_add.xml" value="0.25" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/item_dialog_table.xml" value="0.22" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/item_menu.xml" value="0.25" />
+        <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/item_selectable.xml" value="0.15760869565217392" />
         <entry key="..\:/Android Studio/user/NewVipHotDog/app/src/main/res/layout/item_table.xml" value="0.22" />
       </map>
     </option>
