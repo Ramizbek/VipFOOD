@@ -12,14 +12,12 @@ import developers.sastapp.viphotdog.databinding.FragmentSelectableBinding
 
 class SelectableFragment : Fragment() {
     private lateinit var binding: FragmentSelectableBinding
-    private lateinit var list: ArrayList<Selectable>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        list = MyData.myList
         binding = FragmentSelectableBinding.inflate(layoutInflater)
-        binding.selectableRv.adapter = SelectableAdapter(list)
+        binding.selectableRv.adapter = SelectableAdapter(MyData.myList)
         return binding.root
     }
 }
