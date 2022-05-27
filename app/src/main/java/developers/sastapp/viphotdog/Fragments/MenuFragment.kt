@@ -10,6 +10,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import developers.sastapp.viphotdog.Adapters.MenuAdapter
 import developers.sastapp.viphotdog.Adapters.OnMenuClickListener
 import developers.sastapp.viphotdog.Models.Menu
+import developers.sastapp.viphotdog.Models.Selectable
+import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.R
 import developers.sastapp.viphotdog.databinding.FragmentMenuBinding
 import developers.sastapp.viphotdog.databinding.ItemAddBinding
@@ -59,9 +61,16 @@ class MenuFragment : Fragment() {
                         addName.text = list[position].name
                         addPrice.text = list[position].price
                         addSave.setOnClickListener {
-                            Bundle().putString("name", addName.text.toString())
-                            Bundle().putString("price", addPrice.text.toString())
-                            Bundle().putString("count", addCount.text.toString())
+                            MyData.myList.add(
+                                Selectable(
+                                    addName.text.toString(),
+                                    addPrice.text.toString(),
+                                    addCount.text.toString()
+                                )
+                            )
+//                            Bundle().putString("name", addName.text.toString())
+//                            Bundle().putString("price", addPrice.text.toString())
+//                            Bundle().putString("count", addCount.text.toString())
                             bottom.cancel()
                         }
                     }
