@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import developers.sastapp.viphotdog.R
+import developers.sastapp.viphotdog.models.Selectable
 
-class SwipeAdapter(private val items: ArrayList<String>) :
+class SwipeAdapter(private val items: ArrayList<Selectable>) :
     RecyclerView.Adapter<SwipeAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -21,7 +22,7 @@ class SwipeAdapter(private val items: ArrayList<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = items[position]
+        holder.textView.text = items[position].toString()
     }
 
     override fun getItemCount(): Int = items.size

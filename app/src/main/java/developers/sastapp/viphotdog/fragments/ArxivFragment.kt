@@ -14,7 +14,7 @@ class ArxivFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentArxivBinding.inflate(layoutInflater)
         binding.arxivRv.adapter = ArxivAdapter(MyData.myListArxiv[0])
         return binding.root
