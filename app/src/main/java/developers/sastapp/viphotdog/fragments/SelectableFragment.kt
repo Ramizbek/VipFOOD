@@ -16,6 +16,7 @@ import developers.sastapp.viphotdog.R
 import developers.sastapp.viphotdog.adapters.SwipeAdapter
 import developers.sastapp.viphotdog.databinding.FragmentSelectableBinding
 import developers.sastapp.viphotdog.models.Selectable
+import developers.sastapp.viphotdog.tablePos
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -31,10 +32,11 @@ class SelectableFragment : Fragment() {
     ): View {
         binding = FragmentSelectableBinding.inflate(layoutInflater)
         binding.selectableRv.adapter =
-            SelectableAdapter(MyData.myList[arguments?.getInt("sel")!!])
+            SelectableAdapter(MyData.myList[tablePos])
         return binding.root
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = FragmentSelectableBinding.inflate(layoutInflater)

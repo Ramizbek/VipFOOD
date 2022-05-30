@@ -15,6 +15,7 @@ import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.R
 import developers.sastapp.viphotdog.databinding.FragmentMenuBinding
 import developers.sastapp.viphotdog.databinding.ItemAddBinding
+import developers.sastapp.viphotdog.tablePos
 
 class MenuFragment : Fragment() {
     private lateinit var binding: FragmentMenuBinding
@@ -24,9 +25,6 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentMenuBinding.inflate(layoutInflater)
-
-        // Position for table of main fragment
-        val tablePosition = arguments?.getInt("tablePos")
         start()
         binding.apply {
             menuRv.adapter = MenuAdapter(list, object : OnMenuClickListener {
@@ -69,11 +67,8 @@ class MenuFragment : Fragment() {
                                     addCount.text.toString()
                                 )
                             )
-                            MyData.myList[tablePosition!!] = listt
-                            Bundle().putInt("sel", tablePosition)
-//                            Bundle().putString("name", addName.text.toString())
-//                            Bundle().putString("price", addPrice.text.toString())
-//                            Bundle().putString("count", addCount.text.toString())
+                            MyData.myList[tablePos] = listt
+
                             bottom.cancel()
                         }
                     }

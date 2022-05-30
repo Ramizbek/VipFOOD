@@ -7,3 +7,5 @@ object MyData {
     val myList = ArrayList<ArrayList<Selectable>>()
     val myListArxiv = ArrayList<ArrayList<Arxiv>>()
 }
+
+var tablePos = -1
