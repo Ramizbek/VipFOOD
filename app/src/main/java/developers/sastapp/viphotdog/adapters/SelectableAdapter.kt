@@ -18,9 +18,7 @@ class SelectableAdapter(
                 selectableName.text = selectable.name
                 selectablePrice.text = selectable.price
                 selectableCount.text = selectable.count
-            }
-        }
-    }
+            }}}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderSelectable {
         val bin = ItemSelectableBinding.inflate(LayoutInflater.from(parent.context), parent, false)

@@ -6,6 +6,6 @@ import developers.sastapp.viphotdog.models.Selectable
 object MyData {
     val myList = ArrayList<ArrayList<Selectable>>()
     val myListArxiv = ArrayList<ArrayList<Arxiv>>()
+    var tablePos = -1
 }
 
-var tablePos = -1

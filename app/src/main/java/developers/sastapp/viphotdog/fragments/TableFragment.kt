@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.R
 import developers.sastapp.viphotdog.adapters.OnTableClickListener
 import developers.sastapp.viphotdog.adapters.TableAdapter
 import developers.sastapp.viphotdog.databinding.FragmentTableBinding
 import developers.sastapp.viphotdog.databinding.ItemDialogTableBinding
 import developers.sastapp.viphotdog.models.Table
-import developers.sastapp.viphotdog.tablePos
 
 class TableFragment : Fragment() {
     private lateinit var binding: FragmentTableBinding
@@ -28,7 +28,7 @@ class TableFragment : Fragment() {
             override fun onClick(table: Table, position: Int) {
                 val bottom = BottomSheetDialog(context!!, R.style.NewDialog)
                 val view = ItemDialogTableBinding.inflate(layoutInflater)
-                tablePos = position
+                MyData.tablePos = position
                 view.tableAdd.setOnClickListener {
                     findNavController().navigate(
                         R.id.menuFragment

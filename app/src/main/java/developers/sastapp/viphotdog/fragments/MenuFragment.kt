@@ -2,20 +2,19 @@ package developers.sastapp.viphotdog.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import developers.sastapp.viphotdog.adapters.MenuAdapter
-import developers.sastapp.viphotdog.adapters.OnMenuClickListener
-import developers.sastapp.viphotdog.models.Menu
-import developers.sastapp.viphotdog.models.Selectable
 import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.R
+import developers.sastapp.viphotdog.adapters.MenuAdapter
+import developers.sastapp.viphotdog.adapters.OnMenuClickListener
 import developers.sastapp.viphotdog.databinding.FragmentMenuBinding
 import developers.sastapp.viphotdog.databinding.ItemAddBinding
-import developers.sastapp.viphotdog.tablePos
+import developers.sastapp.viphotdog.models.Menu
+import developers.sastapp.viphotdog.models.Selectable
 
 class MenuFragment : Fragment() {
     private lateinit var binding: FragmentMenuBinding
@@ -67,7 +66,7 @@ class MenuFragment : Fragment() {
                                     addCount.text.toString()
                                 )
                             )
-                            MyData.myList[tablePos] = listt
+                            MyData.myList[MyData.tablePos].addAll(listt)
 
                             bottom.cancel()
                         }
