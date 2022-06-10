@@ -16,7 +16,7 @@ class ArxivFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentArxivBinding.inflate(layoutInflater)
-        binding.arxivRv.adapter = ArxivAdapter(MyData.myListArxiv[0])
+//        binding.arxivRv.adapter = ArxivAdapter(MyData.myListArxiv[0])
         return binding.root
     }
 }
