@@ -1,23 +1,23 @@
-package developers.sastapp.viphotdog.adapters
+package developers.sastapp.viphotdog.Adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import developers.sastapp.viphotdog.models.Selectable
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.ItemSelectableBinding
 
 class SelectableAdapter(
-    private var list: ArrayList<Selectable>
+    private var list: ArrayList<User>
 ) :
     RecyclerView.Adapter<SelectableAdapter.ViewHolderSelectable>() {
 
     inner class ViewHolderSelectable(private val binding: ItemSelectableBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(selectable: Selectable, position: Int) {
+        fun onBind(selectable: User, position: Int) {
             binding.apply {
-                selectableName.text = selectable.name
-                selectablePrice.text = selectable.price
-                selectableCount.text = selectable.count
+                selectableName.text = selectable.selectableName
+                selectablePrice.text = selectable.selectablePrice
+                selectableCount.text = selectable.selectableCount
             }}}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderSelectable {

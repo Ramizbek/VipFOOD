@@ -6,22 +6,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.ActivityMySplashScreenBinding
-import developers.sastapp.viphotdog.models.Selectable
 
 @SuppressLint("CustomSplashScreen")
 class MySplashScreen : AppCompatActivity() {
     private lateinit var binding: ActivityMySplashScreenBinding
-    private val list1 = ArrayList<Selectable>()
-    private val list2 = ArrayList<Selectable>()
-    private val list3 = ArrayList<Selectable>()
-    private val list4 = ArrayList<Selectable>()
-    private val list5 = ArrayList<Selectable>()
-    private val list6 = ArrayList<Selectable>()
-    private val list7 = ArrayList<Selectable>()
-    private val list8 = ArrayList<Selectable>()
-    private val list9 = ArrayList<Selectable>()
-    private val list10 = ArrayList<Selectable>()
+    private val list1 = ArrayList<User>()
+    private val list2 = ArrayList<User>()
+    private val list3 = ArrayList<User>()
+    private val list4 = ArrayList<User>()
+    private val list5 = ArrayList<User>()
+    private val list6 = ArrayList<User>()
+    private val list7 = ArrayList<User>()
+    private val list8 = ArrayList<User>()
+    private val list9 = ArrayList<User>()
+    private val list10 = ArrayList<User>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

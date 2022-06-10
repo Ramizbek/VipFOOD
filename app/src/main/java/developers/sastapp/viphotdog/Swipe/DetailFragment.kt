@@ -1,4 +1,4 @@
-package developers.sastapp.viphotdog.swipe
+package developers.sastapp.viphotdog.Swipe
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

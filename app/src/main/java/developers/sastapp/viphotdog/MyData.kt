@@ -1,11 +1,10 @@
 package developers.sastapp.viphotdog
 
-import developers.sastapp.viphotdog.models.Arxiv
-import developers.sastapp.viphotdog.models.Selectable
+import developers.sastapp.viphotdog.Class.User
 
 object MyData {
-    val myList = ArrayList<ArrayList<Selectable>>()
-    val myListArxiv = ArrayList<ArrayList<Arxiv>>()
+    val myList = ArrayList<ArrayList<User>>()
+    val myListArxiv = ArrayList<ArrayList<User>>()
     var tablePos = -1
 }
 

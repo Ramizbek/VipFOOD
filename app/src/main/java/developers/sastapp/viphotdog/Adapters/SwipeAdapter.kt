@@ -1,14 +1,14 @@
-package developers.sastapp.viphotdog.adapters
+package developers.sastapp.viphotdog.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.R
-import developers.sastapp.viphotdog.models.Selectable
 
-class SwipeAdapter(private val items: ArrayList<Selectable>) :
+class SwipeAdapter(private val items: ArrayList<User>) :
     RecyclerView.Adapter<SwipeAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

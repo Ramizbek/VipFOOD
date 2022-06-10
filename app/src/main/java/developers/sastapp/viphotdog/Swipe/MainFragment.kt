@@ -1,4 +1,4 @@
-package developers.sastapp.viphotdog.swipe
+package developers.sastapp.viphotdog.Swipe
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,14 +10,14 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import developers.sastapp.viphotdog.R
-import developers.sastapp.viphotdog.adapters.RecyclerViewAdapter
+import developers.sastapp.viphotdog.Adapters.RecyclerViewAdapter
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.ActivityMainBinding
-import developers.sastapp.viphotdog.models.DataModel
 
 class MainFragment : Fragment(), RecyclerViewAdapter.ClickListener {
     lateinit var binding: ActivityMainBinding
     private lateinit var adapter: RecyclerViewAdapter
-    private val listData: ArrayList<DataModel> = ArrayList()
+    private val listData: ArrayList<User> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -74,11 +74,11 @@ class MainFragment : Fragment(), RecyclerViewAdapter.ClickListener {
     }
 
     private fun buildDisplayData() {
-        listData.add(DataModel("BMW"))
-        listData.add(DataModel("Mers"))
-        listData.add(DataModel("Audi"))
-        listData.add(DataModel("Chevrolet"))
-        listData.add(DataModel("Lamborghini"))
+        listData.add(User("BMW"))
+        listData.add(User("Mers"))
+        listData.add(User("Audi"))
+        listData.add(User("Chevrolet"))
+        listData.add(User("Lamborghini"))
     }
 
     companion object {
@@ -90,8 +90,8 @@ class MainFragment : Fragment(), RecyclerViewAdapter.ClickListener {
             }
     }
 
-    override fun onItemClick(dataModel: DataModel) {
-        val fragment: Fragment = DetailFragment.newInstance(dataModel.title!!)
+    override fun onItemClick(dataModel: User) {
+        val fragment: Fragment = DetailFragment.newInstance(dataModel.dataModelTitle!!)
         val transaction = activity?.supportFragmentManager!!.beginTransaction()
         transaction.hide(activity?.supportFragmentManager!!.findFragmentByTag("main_fragment")!!)
         transaction.add(R.id.frame_container, fragment)

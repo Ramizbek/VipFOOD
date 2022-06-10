@@ -1,4 +1,4 @@
-package developers.sastapp.viphotdog.fragments
+package developers.sastapp.viphotdog.Fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import developers.sastapp.viphotdog.MyData
-import developers.sastapp.viphotdog.adapters.SelectableAdapter
+import developers.sastapp.viphotdog.Adapters.SelectableAdapter
 import developers.sastapp.viphotdog.databinding.FragmentSelectableBinding
 
 class SelectableFragment : Fragment() {

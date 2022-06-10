@@ -1,15 +1,15 @@
-package developers.sastapp.viphotdog.adapters
+package developers.sastapp.viphotdog.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.R
-import developers.sastapp.viphotdog.models.DataModel
 
 class RecyclerViewAdapter(
-    private val listData: List<DataModel>,
+    private val listData: List<User>,
     var clickListener: ClickListener
 ) :
     RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
@@ -28,14 +28,14 @@ class RecyclerViewAdapter(
     override fun getItemCount(): Int = listData.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.titleTextView.text = listData[position].title
+        holder.titleTextView.text = listData[position].dataModelTitle
         holder.itemView.setOnClickListener {
             clickListener.onItemClick(listData[position])
         }
     }
 
     interface ClickListener {
-        fun onItemClick(dataModel: DataModel)
+        fun onItemClick(dataModel: User)
     }
 }
 
