@@ -13,12 +13,14 @@ class SelectableAdapter(
 
     inner class ViewHolderSelectable(private val binding: ItemSelectableBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(selectable: User, position: Int) {
+        fun onBind(selectable: User) {
             binding.apply {
                 selectableName.text = selectable.selectableName
                 selectablePrice.text = selectable.selectablePrice
                 selectableCount.text = selectable.selectableCount
-            }}}
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderSelectable {
         val bin = ItemSelectableBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,7 +28,7 @@ class SelectableAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolderSelectable, position: Int) =
-        holder.onBind(list[position], position)
+        holder.onBind(list[position])
 
     override fun getItemCount(): Int = list.size
 }

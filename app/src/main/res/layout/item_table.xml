@@ -12,9 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#302F2F"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
         app:cardCornerRadius="12dp">
 
         <LinearLayout

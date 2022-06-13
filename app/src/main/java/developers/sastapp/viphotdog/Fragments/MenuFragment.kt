@@ -69,7 +69,6 @@ class MenuFragment : Fragment() {
                                 )
                             )
                             MyData.myList[MyData.tablePos].addAll(listt)
-
                             bottom.cancel()
                         }
                     }

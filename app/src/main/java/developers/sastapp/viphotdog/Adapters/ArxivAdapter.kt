@@ -13,7 +13,7 @@ class ArxivAdapter(
 
     inner class ViewHolderArxiv(private val binding: ItemArxivBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(arxiv: User, position: Int) {
+        fun onBind(arxiv: User) {
             binding.apply {
                 arxivName.text = arxiv.arxivName
                 arxivPrice.text = arxiv.arxivPrice
@@ -28,7 +28,7 @@ class ArxivAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolderArxiv, position: Int) =
-        holder.onBind(list[position], position)
+        holder.onBind(list[position])
 
     override fun getItemCount(): Int = list.size
 }
