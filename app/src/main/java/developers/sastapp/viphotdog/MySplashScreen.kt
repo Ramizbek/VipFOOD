@@ -43,6 +43,6 @@ class MySplashScreen : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             binding.myProgress.visibility = View.INVISIBLE
             finish()
-        }, 999)
+        }, 1000000000000)
     }
 }

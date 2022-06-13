@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import developers.sastapp.viphotdog.R
-import developers.sastapp.viphotdog.Adapters.RecyclerViewAdapter
 import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.ActivityMainBinding
 
