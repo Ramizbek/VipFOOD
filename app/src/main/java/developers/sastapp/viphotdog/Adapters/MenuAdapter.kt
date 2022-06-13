@@ -1,24 +1,24 @@
-package developers.sastapp.viphotdog.adapters
+package developers.sastapp.viphotdog.Adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import developers.sastapp.viphotdog.models.Menu
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.ItemMenuBinding
 
 class MenuAdapter(
-    private var list: ArrayList<Menu>,
+    private var list: ArrayList<User>,
     private var onItemClickListener: OnMenuClickListener
 ) :
     RecyclerView.Adapter<MenuAdapter.ViewHolderMenu>() {
 
     inner class ViewHolderMenu(private val binding: ItemMenuBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(menu: Menu, position: Int) {
+        fun onBind(menu: User, position: Int) {
             binding.apply {
-                menuImage.setImageResource(menu.image)
-                menuName.text = menu.name
-                menuPrice.text = menu.price
+                menuImage.setImageResource(menu.menuImage!!)
+                menuName.text = menu.menuName
+                menuPrice.text = menu.menuPrice
                 menuItem.setOnClickListener {
                     onItemClickListener.onClick(menu, position)
                 }
@@ -39,5 +39,5 @@ class MenuAdapter(
 }
 
 interface OnMenuClickListener {
-    fun onClick(menu: Menu, position: Int)
+    fun onClick(menu: User, position: Int)
 }

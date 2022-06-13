@@ -1,23 +1,23 @@
-package developers.sastapp.viphotdog.adapters
+package developers.sastapp.viphotdog.Adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import developers.sastapp.viphotdog.models.Arxiv
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.ItemArxivBinding
 
 class ArxivAdapter(
-    private var list: ArrayList<Arxiv>
+    private var list: ArrayList<User>
 ) :
     RecyclerView.Adapter<ArxivAdapter.ViewHolderArxiv>() {
 
     inner class ViewHolderArxiv(private val binding: ItemArxivBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(arxiv: Arxiv, position: Int) {
+        fun onBind(arxiv: User, position: Int) {
             binding.apply {
-                arxivName.text = arxiv.name
-                arxivPrice.text = arxiv.price
-                arxivCount.text = arxiv.count
+                arxivName.text = arxiv.arxivName
+                arxivPrice.text = arxiv.arxivPrice
+                arxivCount.text = arxiv.arxivCount
             }
         }
     }

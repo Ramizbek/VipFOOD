@@ -1,9 +1,11 @@
 package developers.sastapp.viphotdog
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import developers.sastapp.viphotdog.databinding.ActivityMainBinding
+import developers.sastapp.viphotdog.Swipe.MainFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -12,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
     }
 
     override fun onSupportNavigateUp(): Boolean =

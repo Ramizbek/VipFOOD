@@ -1,11 +1,11 @@
-package developers.sastapp.viphotdog.fragments
+package developers.sastapp.viphotdog.Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import developers.sastapp.viphotdog.adapters.ArxivAdapter
+import developers.sastapp.viphotdog.Adapters.ArxivAdapter
 import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.databinding.FragmentArxivBinding
 
@@ -16,7 +16,7 @@ class ArxivFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentArxivBinding.inflate(layoutInflater)
-        binding.arxivRv.adapter = ArxivAdapter(MyData.myListArxiv[0])
+//        binding.arxivRv.adapter = ArxivAdapter(MyData.myListArxiv[0])
         return binding.root
     }
 }

@@ -1,4 +1,4 @@
-package developers.sastapp.viphotdog.fragments
+package developers.sastapp.viphotdog.Fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,16 +9,15 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import developers.sastapp.viphotdog.MyData
 import developers.sastapp.viphotdog.R
-import developers.sastapp.viphotdog.adapters.MenuAdapter
-import developers.sastapp.viphotdog.adapters.OnMenuClickListener
+import developers.sastapp.viphotdog.Adapters.MenuAdapter
+import developers.sastapp.viphotdog.Adapters.OnMenuClickListener
+import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.FragmentMenuBinding
 import developers.sastapp.viphotdog.databinding.ItemAddBinding
-import developers.sastapp.viphotdog.models.Menu
-import developers.sastapp.viphotdog.models.Selectable
 
 class MenuFragment : Fragment() {
     private lateinit var binding: FragmentMenuBinding
-    private lateinit var list: ArrayList<Menu>
+    private lateinit var list: ArrayList<User>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,7 +27,7 @@ class MenuFragment : Fragment() {
         binding.apply {
             menuRv.adapter = MenuAdapter(list, object : OnMenuClickListener {
                 @SuppressLint("SetTextI18n")
-                override fun onClick(menu: Menu, position: Int) {
+                override fun onClick(menu: User, position: Int) {
                     val bottom = BottomSheetDialog(binding.root.context, R.style.NewDialog)
                     val item = ItemAddBinding.inflate(
                         LayoutInflater.from(binding.root.context),
@@ -40,7 +39,10 @@ class MenuFragment : Fragment() {
                     item.apply {
                         var count = 0
                         val mPrice =
-                            list[position].price.substring(0, list[position].price.length - 4)
+                            list[position].menuPrice!!.substring(
+                                0,
+                                list[position].menuPrice!!.length - 4
+                            )
                                 .toInt()
                         addPlus.setOnClickListener {
                             addCount.text = "${++count}"
@@ -55,12 +57,12 @@ class MenuFragment : Fragment() {
                                 addPrice.text = "$mPrice сум"
                             }
                         }
-                        addName.text = list[position].name
-                        addPrice.text = list[position].price
+                        addName.text = list[position].menuName
+                        addPrice.text = list[position].menuPrice
                         addSave.setOnClickListener {
-                            val listt = ArrayList<Selectable>()
+                            val listt = ArrayList<User>()
                             listt.add(
-                                Selectable(
+                                User(
                                     addName.text.toString(),
                                     addPrice.text.toString(),
                                     addCount.text.toString()
@@ -79,19 +81,19 @@ class MenuFragment : Fragment() {
 
     private fun start() {
         list = ArrayList()
-        list.add(Menu(R.drawable.miks, "Микс Мал", "17000 сум"))
-        list.add(Menu(R.drawable.miks, "Микс Бол", "25000 сум"))
-        list.add(Menu(R.drawable.kur, "Кур Мал", "11000 сум"))
-        list.add(Menu(R.drawable.kur, "Кур Бол", "17000 сум"))
-        list.add(Menu(R.drawable.kotlet, "Котлет Мал", "12000 сум"))
-        list.add(Menu(R.drawable.kotlet, "Котлет Бол", "19000 сум"))
-        list.add(Menu(R.drawable.qazi, "Казы Мал", "11000 сум"))
-        list.add(Menu(R.drawable.qazi, "Казы Бол", "17000 сум"))
-        list.add(Menu(R.drawable.fri, "Фри", "10000 сум"))
-        list.add(Menu(R.drawable.coffe, "Кофе", "4000 сум"))
-        list.add(Menu(R.drawable.moxito, "Мохито", "10000 сум"))
-        list.add(Menu(R.drawable.banana, "Банан-кок", "11000 сум"))
-        list.add(Menu(R.drawable.cheeseburger, "Чизбургер", "18000 сум"))
-        list.add(Menu(R.drawable.gamburger, "Гамбургер", "15000 сум"))
+        list.add(User(R.drawable.miks, "Микс Мал", "17000 сум"))
+        list.add(User(R.drawable.miks, "Микс Бол", "25000 сум"))
+        list.add(User(R.drawable.kur, "Кур Мал", "11000 сум"))
+        list.add(User(R.drawable.kur, "Кур Бол", "17000 сум"))
+        list.add(User(R.drawable.kotlet, "Котлет Мал", "12000 сум"))
+        list.add(User(R.drawable.kotlet, "Котлет Бол", "19000 сум"))
+        list.add(User(R.drawable.qazi, "Казы Мал", "11000 сум"))
+        list.add(User(R.drawable.qazi, "Казы Бол", "17000 сум"))
+        list.add(User(R.drawable.fri, "Фри", "10000 сум"))
+        list.add(User(R.drawable.coffe, "Кофе", "4000 сум"))
+        list.add(User(R.drawable.moxito, "Мохито", "10000 сум"))
+        list.add(User(R.drawable.banana, "Банан-кок", "11000 сум"))
+        list.add(User(R.drawable.cheeseburger, "Чизбургер", "18000 сум"))
+        list.add(User(R.drawable.gamburger, "Гамбургер", "15000 сум"))
     }
 }
