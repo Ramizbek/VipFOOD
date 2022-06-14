@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_tableFragment_to_selectableFragment"
             app:destination="@id/selectableFragment" />
-        <action
-            android:id="@+id/action_tableFragment_to_arxivFragment"
-            app:destination="@id/arxivFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -30,9 +27,4 @@
         android:name="developers.sastapp.viphotdog.Fragments.SelectableFragment"
         android:label="fragment_selectable"
         tools:layout="@layout/fragment_selectable" />
-    <fragment
-        android:id="@+id/arxivFragment"
-        android:name="developers.sastapp.viphotdog.Fragments.ArxivFragment"
-        android:label="fragment_arxiv"
-        tools:layout="@layout/fragment_arxiv" />
 </navigation>

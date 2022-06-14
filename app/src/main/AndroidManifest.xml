@@ -11,10 +11,12 @@
         android:theme="@style/Theme.NewVipHotDog">
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Vip-Hot-Dog" />
         <activity
             android:name=".MySplashScreen"
-            android:exported="true">
+            android:exported="true"
+            android:label="Vip-Hot-Dog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

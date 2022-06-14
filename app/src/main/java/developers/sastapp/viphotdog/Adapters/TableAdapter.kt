@@ -3,23 +3,24 @@ package developers.sastapp.viphotdog.Adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import developers.sastapp.viphotdog.Class.Table
 import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.databinding.ItemTableBinding
 import java.time.LocalDate
 import java.time.LocalTime
 
 class TableAdapter(
-    private var list: ArrayList<User>,
+    private var list: ArrayList<Table>,
     var onItemClickListener: OnTableClickListener
 ) :
     RecyclerView.Adapter<TableAdapter.ViewHolderTable>() {
 
     inner class ViewHolderTable(var binding: ItemTableBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(table: User, position: Int) {
+        fun onBind(table: Table, position: Int) {
             binding.apply {
-                tableImage.setImageResource(table.tableImage!!)
-                tableName.text = table.tableName
+                tableImage.setImageResource(table.image!!)
+                tableName.text = table.name
                 tableTime.text = "${LocalTime.now()}"
                 tableDate.text = "${LocalDate.now()}"
                 tableItem.setOnClickListener {
@@ -41,5 +42,5 @@ class TableAdapter(
 }
 
 interface OnTableClickListener {
-    fun onClick(table: User, position: Int)
+    fun onClick(table: Table, position: Int)
 }
