@@ -44,4 +44,9 @@
         android:name="developers.sastapp.viphotdog.Fragments.ArxivFragment"
         android:label="fragment_arxiv"
         tools:layout="@layout/fragment_arxiv" />
+    <fragment
+        android:id="@+id/bigArxivFragment"
+        android:name="developers.sastapp.viphotdog.BigArxivFragment"
+        android:label="fragment_big_arxiv"
+        tools:layout="@layout/fragment_big_arxiv" />
 </navigation>

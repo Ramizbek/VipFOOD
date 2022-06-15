@@ -54,11 +54,11 @@ class MenuFragment : Fragment() {
                             addPrice.text = "${mPrice * count} сум"
                         }
                         addMinus.setOnClickListener {
-                            if (addCount.text != "0") {
+                            if (addCount.text != "0 та") {
                                 addCount.text = "${--count} та"
                                 addPrice.text = "${mPrice * count} сум"
                             }
-                            if (addCount.text == "0") {
+                            if (addCount.text == "0 та") {
                                 addPrice.text = "$mPrice сум"
                             }
                         }

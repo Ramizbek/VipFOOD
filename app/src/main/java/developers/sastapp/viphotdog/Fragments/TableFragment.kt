@@ -50,6 +50,7 @@ class TableFragment : Fragment() {
                         }
                     }
                 })
+            arxiv.setOnClickListener { findNavController().navigate(R.id.bigArxivFragment) }
             return this.root
         }
     }
