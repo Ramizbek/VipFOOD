@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginEnd="40dp"
-                    android:text="@string/_0"
+                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="50sp" />
 
@@ -114,7 +114,7 @@
                 android:layout_margin="12dp"
                 android:background="@null"
                 android:backgroundTint="#FF3300"
-                android:text="@string/save"
+                android:text="save"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:cornerRadius="20dp"

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import developers.sastapp.viphotdog.Adapters.MenuAdapter
-import developers.sastapp.viphotdog.Adapters.OnMenuClickListener
 import developers.sastapp.viphotdog.Class.Menu
 import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.DataBase.MyDBHelper
@@ -16,6 +15,8 @@ import developers.sastapp.viphotdog.Object.MyObject
 import developers.sastapp.viphotdog.R
 import developers.sastapp.viphotdog.databinding.FragmentMenuBinding
 import developers.sastapp.viphotdog.databinding.ItemAddBinding
+import java.time.LocalDate
+import java.time.LocalTime
 
 @SuppressLint("SetTextI18n")
 class MenuFragment : Fragment() {
@@ -31,7 +32,7 @@ class MenuFragment : Fragment() {
             myDBHelper = MyDBHelper(binding.root.context)
             val myList = myDBHelper.readUser()
             start()
-            menuRv.adapter = MenuAdapter(list, object : OnMenuClickListener {
+            menuRv.adapter = MenuAdapter(list, object : MenuAdapter.OnMenuClickListener {
                 override fun onClick(menu: Menu, position: Int) {
                     val bottom = BottomSheetDialog(root.context, R.style.NewDialog)
                     val item = ItemAddBinding.inflate(
@@ -63,10 +64,12 @@ class MenuFragment : Fragment() {
                         }
                         addSave.setOnClickListener {
                             val user = User(
-                                MyObject.position,
                                 addName.text.toString(),
                                 addPrice.text.toString(),
-                                addCount.text.toString()
+                                addCount.text.toString(),
+                                local(),
+                                MyObject.pos,
+                                1
                             )
                             myList.add(user)
                             myDBHelper.createUser(user)
@@ -91,11 +94,27 @@ class MenuFragment : Fragment() {
         list.add(Menu(R.drawable.kotlet, "Котлет Бол", "19000 сум"))
         list.add(Menu(R.drawable.qazi, "Казы Мал", "11000 сум"))
         list.add(Menu(R.drawable.qazi, "Казы Бол", "17000 сум"))
-        list.add(Menu(R.drawable.fri, "Фри", "10000 сум"))
-        list.add(Menu(R.drawable.coffe, "Кофе", "4000 сум"))
-        list.add(Menu(R.drawable.moxito, "Мохито", "10000 сум"))
-        list.add(Menu(R.drawable.banana, "Банан-кок", "11000 сум"))
-        list.add(Menu(R.drawable.cheeseburger, "Чизбургер", "18000 сум"))
         list.add(Menu(R.drawable.gamburger, "Гамбургер", "15000 сум"))
+        list.add(Menu(R.drawable.cheeseburger, "Чизбургер", "18000 сум"))
+        list.add(Menu(R.drawable.fri, "Фри", "10000 сум"))
+        list.add(Menu(R.drawable.banana, "Банан-кок", "11000 сум"))
+        list.add(Menu(R.drawable.moxito, "Мохито", "10000 сум"))
+        list.add(Menu(R.drawable.coffe, "Кофе", "4000 сум"))
+    }
+
+    private fun local(): String {
+        val month =
+            if (LocalDate.now().monthValue.toString().length == 1) "0${LocalDate.now().monthValue}"
+            else "${LocalDate.now().monthValue}"
+        val day =
+            if (LocalDate.now().dayOfMonth.toString().length == 1) "0${LocalDate.now().dayOfMonth}"
+            else "${LocalDate.now().dayOfMonth}"
+        val hour =
+            if (LocalTime.now().hour.toString().length == 1) "0${LocalTime.now().hour}"
+            else "${LocalTime.now().hour}"
+        val minute =
+            if (LocalTime.now().minute.toString().length == 1) "0${LocalTime.now().minute}"
+            else "${LocalTime.now().minute}"
+        return "$day.$month.${LocalDate.now().year} - $hour:$minute"
     }
 }

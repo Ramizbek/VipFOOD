@@ -3,19 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_navigation"
-    app:startDestination="@id/tableFragment">
+    app:startDestination="@id/splashFragment">
 
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="developers.sastapp.viphotdog.Fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_tableFragment"
+            app:destination="@id/tableFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tableFragment"
         android:name="developers.sastapp.viphotdog.Fragments.TableFragment"
         android:label="fragment_table"
         tools:layout="@layout/fragment_table">
         <action
-            android:id="@+id/action_tablesFragment_to_menuFragment"
+            android:id="@+id/action_tableFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
         <action
             android:id="@+id/action_tableFragment_to_selectableFragment"
             app:destination="@id/selectableFragment" />
+        <action
+            android:id="@+id/action_tableFragment_to_arxivFragment"
+            app:destination="@id/arxivFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -27,4 +39,9 @@
         android:name="developers.sastapp.viphotdog.Fragments.SelectableFragment"
         android:label="fragment_selectable"
         tools:layout="@layout/fragment_selectable" />
+    <fragment
+        android:id="@+id/arxivFragment"
+        android:name="developers.sastapp.viphotdog.Fragments.ArxivFragment"
+        android:label="fragment_arxiv"
+        tools:layout="@layout/fragment_arxiv" />
 </navigation>

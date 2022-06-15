@@ -2,23 +2,44 @@ package developers.sastapp.viphotdog.Class
 
 class User {
     var id: Int? = null
-    var tableId: Int? = null
     var name: String? = null
     var price: String? = null
     var count: String? = null
+    var date: String? = null
+    var number: Int? = null
+    var select: Int? = null
 
-    constructor(id: Int?, tableId: Int?, name: String?, price: String?, count: String?) {
+    constructor(
+        id: Int?,
+        name: String?,
+        price: String?,
+        count: String?,
+        date: String?,
+        number: Int?,
+        select: Int?
+    ) {
         this.id = id
-        this.tableId = tableId
         this.name = name
         this.price = price
         this.count = count
+        this.date = date
+        this.number = number
+        this.select = select
     }
 
-    constructor(tableId: Int?, name: String?, price: String?, count: String?) {
-        this.tableId = tableId
+    constructor(
+        name: String?,
+        price: String?,
+        count: String?,
+        date: String?,
+        number: Int?,
+        select: Int?
+    ) {
         this.name = name
         this.price = price
         this.count = count
+        this.date = date
+        this.number = number
+        this.select = select
     }
 }

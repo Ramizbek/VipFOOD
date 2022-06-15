@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/selectable_rv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:context="Fragments.SelectableFragment"
-    tools:listitem="@layout/item_selectable" />
+    tools:context="Fragments.SelectableFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectable_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_selectable" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="#0044FF"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

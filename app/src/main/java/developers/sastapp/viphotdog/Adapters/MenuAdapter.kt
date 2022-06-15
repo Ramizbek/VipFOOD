@@ -35,8 +35,9 @@ class MenuAdapter(
         holder.onBind(list[position], position)
 
     override fun getItemCount(): Int = list.size
+
+    interface OnMenuClickListener {
+        fun onClick(menu: Menu, position: Int)
+    }
 }
 
-interface OnMenuClickListener {
-    fun onClick(menu: Menu, position: Int)
-}

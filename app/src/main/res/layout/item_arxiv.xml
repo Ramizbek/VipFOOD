@@ -9,11 +9,11 @@
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="01012000"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:text="01012000"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:clickable="true"
         android:focusable="true"
         android:foreground="?selectableItemBackground"
-        app:cardCornerRadius="12dp">
+        app:cardCornerRadius="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/selectable_name"
+                android:id="@+id/arxiv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -42,7 +42,7 @@
                 android:textSize="25sp" />
 
             <TextView
-                android:id="@+id/selectable_count"
+                android:id="@+id/arxiv_count"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -53,7 +53,7 @@
                 android:textSize="25sp" />
 
             <TextView
-                android:id="@+id/selectable_price"
+                android:id="@+id/arxiv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

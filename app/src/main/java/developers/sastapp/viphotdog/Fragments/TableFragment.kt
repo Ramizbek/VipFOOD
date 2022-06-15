@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import developers.sastapp.viphotdog.Adapters.OnTableClickListener
 import developers.sastapp.viphotdog.Adapters.TableAdapter
 import developers.sastapp.viphotdog.Class.Table
 import developers.sastapp.viphotdog.Object.MyObject
@@ -28,24 +27,29 @@ class TableFragment : Fragment() {
             for (i in 1..10) {
                 list.add(Table(R.drawable.logo_food, "Table $i"))
             }
-            tableRv.adapter = TableAdapter(list, object : OnTableClickListener {
-                override fun onClick(table: Table, position: Int) {
-                    val bottom = BottomSheetDialog(context!!, R.style.NewDialog)
-                    ItemDialogTableBinding.inflate(layoutInflater).apply {
-                        MyObject.position = position
-                        tableAdd.setOnClickListener {
-                            findNavController().navigate(R.id.menuFragment)
-                            bottom.cancel()
+            tableRv.adapter =
+                TableAdapter(root.context, list, object : TableAdapter.OnTableClickListener {
+                    override fun onClick(table: Table, position: Int) {
+                        val bottom = BottomSheetDialog(context!!, R.style.NewDialog)
+                        ItemDialogTableBinding.inflate(layoutInflater).apply {
+                            MyObject.pos = position
+                            tableAdd.setOnClickListener {
+                                findNavController().navigate(R.id.menuFragment)
+                                bottom.cancel()
+                            }
+                            tableSelectable.setOnClickListener {
+                                findNavController().navigate(R.id.selectableFragment)
+                                bottom.cancel()
+                            }
+                            tableArxiv.setOnClickListener {
+                                findNavController().navigate(R.id.arxivFragment)
+                                bottom.cancel()
+                            }
+                            bottom.setContentView(this.root)
+                            bottom.show()
                         }
-                        tableSelectable.setOnClickListener {
-                            findNavController().navigate(R.id.selectableFragment)
-                            bottom.cancel()
-                        }
-                        bottom.setContentView(this.root)
-                        bottom.show()
                     }
-                }
-            })
+                })
             return this.root
         }
     }

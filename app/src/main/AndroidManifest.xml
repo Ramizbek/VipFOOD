@@ -4,19 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_food"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewVipHotDog">
         <activity
             android:name=".MainActivity"
-            android:exported="false"
-            android:label="Vip-Hot-Dog" />
-        <activity
-            android:name=".MySplashScreen"
-            android:exported="true"
-            android:label="Vip-Hot-Dog">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
