@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import developers.sastapp.viphotdog.Adapters.ArxivAdapter
 import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.DataBase.MyDBHelper
@@ -31,6 +32,12 @@ class ArxivFragment : Fragment() {
             }
             arxivAdapter = ArxivAdapter(posList)
             arxivRv.adapter = arxivAdapter
+            back.setOnClickListener { findNavController().popBackStack() }
+            var price = 0
+            for (i in posList) {
+                price += i.price!!.substring(0, i.price!!.length - 4).toInt()
+            }
+            total.text = "$price сум"
             return root
         }
     }

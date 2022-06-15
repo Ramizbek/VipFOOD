@@ -25,7 +25,7 @@ class TableFragment : Fragment() {
         binding.apply {
             list = ArrayList()
             for (i in 1..10) {
-                list.add(Table(R.drawable.logo_food, "Table $i"))
+                list.add(Table(R.drawable.logo_food, "Стол - $i"))
             }
             tableRv.adapter =
                 TableAdapter(root.context, list, object : TableAdapter.OnTableClickListener {
@@ -45,6 +45,7 @@ class TableFragment : Fragment() {
                                 findNavController().navigate(R.id.arxivFragment)
                                 bottom.cancel()
                             }
+                            bottom.setCancelable(true)
                             bottom.setContentView(this.root)
                             bottom.show()
                         }

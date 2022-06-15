@@ -49,6 +49,14 @@
         <entry key="..\:/Homeworks Android/Vip_Hot_Dog/app/src/main/res/layout/fragment_table.xml" value="0.24537037037037038" />
         <entry key="..\:/Homeworks Android/Vip_Hot_Dog/app/src/main/res/layout/item_selectable.xml" value="0.26197916666666665" />
         <entry key="..\:/Homeworks Android/Vip_Hot_Dog/app/src/main/res/layout/recycle_row.xml" value="0.2604166666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_arxiv.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_big_arxiv.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_selectable.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/fragment_table.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/item_selectable.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/item_table.xml" value="0.31875" />
       </map>
     </option>
   </component>

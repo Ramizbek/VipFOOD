@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_splashFragment_to_tableFragment"
             app:destination="@id/tableFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_bigArxivFragment"
+            app:destination="@id/bigArxivFragment" />
     </fragment>
     <fragment
         android:id="@+id/tableFragment"

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import developers.sastapp.viphotdog.Adapters.MenuAdapter
 import developers.sastapp.viphotdog.Class.Menu
@@ -63,23 +64,27 @@ class MenuFragment : Fragment() {
                             }
                         }
                         addSave.setOnClickListener {
-                            val user = User(
-                                addName.text.toString(),
-                                addPrice.text.toString(),
-                                addCount.text.toString(),
-                                local(),
-                                MyObject.pos,
-                                1
-                            )
-                            myList.add(user)
-                            myDBHelper.createUser(user)
-                            bottom.cancel()
+                            if (addCount.text.toString() != "0 та") {
+                                val user = User(
+                                    addName.text.toString(),
+                                    addPrice.text.toString(),
+                                    addCount.text.toString(),
+                                    local(),
+                                    MyObject.pos,
+                                    1
+                                )
+                                myList.add(user)
+                                myDBHelper.createUser(user)
+                                bottom.cancel()
+                            }
                         }
                     }
+                    bottom.setCancelable(true)
                     bottom.setContentView(item.root)
                     bottom.show()
                 }
             })
+            back.setOnClickListener { findNavController().popBackStack() }
             return root
         }
     }
@@ -96,9 +101,9 @@ class MenuFragment : Fragment() {
         list.add(Menu(R.drawable.qazi, "Казы Бол", "17000 сум"))
         list.add(Menu(R.drawable.gamburger, "Гамбургер", "15000 сум"))
         list.add(Menu(R.drawable.cheeseburger, "Чизбургер", "18000 сум"))
+        list.add(Menu(R.drawable.nonkabob, "Нон кабоб", "17000 сум"))
         list.add(Menu(R.drawable.fri, "Фри", "10000 сум"))
         list.add(Menu(R.drawable.banana, "Банан-кок", "11000 сум"))
-        list.add(Menu(R.drawable.moxito, "Мохито", "10000 сум"))
         list.add(Menu(R.drawable.coffe, "Кофе", "4000 сум"))
     }
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import developers.sastapp.viphotdog.Adapters.SelectableAdapter
 import developers.sastapp.viphotdog.Class.User
 import developers.sastapp.viphotdog.DataBase.MyDBHelper
@@ -50,9 +51,16 @@ class SelectableFragment : Fragment() {
                         posList.remove(user)
                         selectableRv.visibility = View.INVISIBLE
                     }
+                    total.text = "0 сум"
                     it.visibility = View.INVISIBLE
                 }
             } else delete.visibility = View.INVISIBLE
+            back.setOnClickListener { findNavController().popBackStack() }
+            var price = 0
+            for (i in posList) {
+                price += i.price!!.substring(0, i.price!!.length - 4).toInt()
+            }
+            total.text = "$price сум"
             return root
         }
     }
