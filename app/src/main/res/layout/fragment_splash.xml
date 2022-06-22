@@ -9,22 +9,24 @@
 
     <ImageView
         android:id="@+id/splash_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_100sdp"
         android:background="@drawable/logo_food"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.275"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.625" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:text="VIP HOT-DOG"
         android:textColor="@color/white"
-        android:textSize="32sp"
+        android:textSize="@dimen/_28ssp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,25 +34,24 @@
 
     <ProgressBar
         android:id="@+id/my_progress"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
         android:indeterminateTint="#fd7"
         app:layout_constraintBottom_toTopOf="@+id/powered"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.320"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/powered"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/_12sdp"
         android:gravity="center"
         android:text="Powered by\n Android SastApp\n in Ferghana"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="@dimen/_18ssp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent" />
 

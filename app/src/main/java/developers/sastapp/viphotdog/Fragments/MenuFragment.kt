@@ -88,7 +88,6 @@ class MenuFragment : Fragment() {
             return root
         }
     }
-
     private fun start() {
         list = ArrayList()
         list.add(Menu(R.drawable.miks, "Микс Мал", "17000 сум"))
