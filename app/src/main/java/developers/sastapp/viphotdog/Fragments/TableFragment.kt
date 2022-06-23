@@ -30,8 +30,8 @@ class TableFragment : Fragment() {
             tableRv.adapter =
                 TableAdapter(root.context, list, object : TableAdapter.OnTableClickListener {
                     override fun onClick(table: Table, position: Int) {
-                        val bottom = BottomSheetDialog(context!!, R.style.NewDialog)
-                        ItemDialogTableBinding.inflate(layoutInflater).apply {
+                        val bottom = BottomSheetDialog(root.context, R.style.NewDialog)
+                        val item = ItemDialogTableBinding.inflate(layoutInflater).apply {
                             MyObject.pos = position
                             tableAdd.setOnClickListener {
                                 findNavController().navigate(R.id.menuFragment)
@@ -45,10 +45,10 @@ class TableFragment : Fragment() {
                                 findNavController().navigate(R.id.arxivFragment)
                                 bottom.cancel()
                             }
-                            bottom.setCancelable(true)
-                            bottom.setContentView(this.root)
-                            bottom.show()
                         }
+                        bottom.setCancelable(true)
+                        bottom.setContentView(item.root)
+                        bottom.show()
                     }
                 })
             arxiv.setOnClickListener { findNavController().navigate(R.id.bigArxivFragment) }

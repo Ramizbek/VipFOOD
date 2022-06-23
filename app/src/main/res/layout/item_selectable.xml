@@ -3,28 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp">
 
     <TextView
         android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="01012000"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="@dimen/_15ssp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="@dimen/_60sdp"
         android:backgroundTint="#FFC107"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?selectableItemBackground"
-        app:cardCornerRadius="12dp">
+        app:cardCornerRadius="@dimen/_20sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,7 +37,7 @@
                 android:gravity="center"
                 android:text="name"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="@dimen/_20ssp" />
 
             <TextView
                 android:id="@+id/selectable_count"
@@ -50,7 +48,7 @@
                 android:gravity="center"
                 android:text="2 ta"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="@dimen/_20ssp" />
 
             <TextView
                 android:id="@+id/selectable_price"
@@ -60,7 +58,7 @@
                 android:gravity="center"
                 android:text="20000 so'm"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="@dimen/_20ssp" />
 
         </LinearLayout>
 
